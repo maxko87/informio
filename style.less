@@ -1,0 +1,145 @@
+html {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+#wiki {
+	padding: 25px;
+	font-family: Libre Baskerville;
+	font-size: 25px;
+	line-height: 120%;
+}
+
+.youtube {
+	height: 100%;
+	width: 100%;
+}
+
+.rectangle(@background-color, @top, @left){
+	overflow: hidden;
+	background-color: @background-color;
+	height: 33%;
+	width: 33%;
+	position: absolute;
+	top: @top;
+	left: @left;
+}
+
+#rect1 {
+	.rectangle(@background-color: yellow, @top: 0%, @left: 0%);
+}
+#rect2 {
+	.rectangle(@background-color: red, @top: 0%, @left: 33%);
+}
+#rect3 {
+	.rectangle(@background-color: blue, @top: 0%, @left: 66%);
+	width: 34%;
+}
+#rect4 {
+	.rectangle(@background-color: orange, @top: 33%, @left: 0%);
+}
+#rect5 {
+	.rectangle(@background-color: magenta, @top: 33%, @left: 33%);
+}
+#rect6 {
+	.rectangle(@background-color: silver, @top: 33%, @left: 66%);
+	width: 34%;
+}
+#rect7 {
+	.rectangle(@background-color: purple, @top: 66%, @left: 0%);
+	height: 34%;
+}
+#rect8 {
+	.rectangle(@background-color: gold, @top: 66%, @left: 33%);
+	height: 34%;
+}
+#rect9 {
+	.rectangle(@background-color: brown, @top: 66%, @left: 66%);
+	width: 34%;
+	height: 34%;
+}
+
+
+
+
+
+
+
+#cool-textbox {
+    font-size: 52px;
+    letter-spacing: .5px;
+    word-spacing: 2.5px;
+    margin: 0 auto;
+
+    position: absolute;
+    margin-top: 300px;
+    height: 200px;
+    left: 50%;
+    margin-left: -240px;
+    width: 800;
+    -webkit-transition: opacity 0.3s ease-in;
+    transition: opacity 0.3s ease-in;
+}
+
+#cool-textbox > span {
+    -webkit-transition-property: rotate, translate, opacity, left, right, top, bottom;
+    -webkit-transition-duration: 0.1s, 0.1s, 0.1s, 0.3s;
+    -webkit-transition-timing-function: ease-in, ease-in, ease-in, cubic-bezier(0.060, 0.450, 0.350, 1.365);
+    transition-property: rotate, translate, opacity, left, right, top, bottom;
+    transition-duration: 0.1s, 0.1s, 0.1s, 0.3s;
+    transition-timing-function: ease-in, ease-in, ease-in, cubic-bezier(0.060, 0.450, 0.350, 1.365);
+    position: relative;
+    opacity: 0.01;
+}
+
+#cool-textbox span.visible {
+    opacity: 1;
+}
+
+.blinker {
+    width: 30px;
+    height: 5px;
+    background: #222;
+    position: absolute;
+    top: 70px;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-name: blink;
+    -webkit-animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    30% { opacity: 0.2; }
+    100% { opacity: 1; }
+}
+@-webkit-keyframes blink {
+    0% { opacity: 1; }
+    30% { opacity: 0.2; }
+    100% { opacity: 1; }
+}
+
+/*
+#cool-textbox .match {
+    color: rgba(20,20,20,0.7);
+    display: inline-block;
+    vertical-align: top;
+}
+
+#cool-textbox .match.disabled .first-line {
+    color: rgba(20,20,20,0.3);
+}
+
+#cool-textbox .match .first-line {
+    color: rgba(20,20,20,0.9);
+}
+*/
+
