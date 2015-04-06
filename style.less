@@ -2,6 +2,7 @@ html {
 	height: 100%;
 	padding: 0;
 	margin: 0;
+    vertical-align: justify
 }
 body {
 	height: 100%;
@@ -12,13 +13,18 @@ body {
 #wiki {
 	padding: 25px;
 	font-family: Libre Baskerville;
-	font-size: 25px;
+	font-size: 28;
 	line-height: 120%;
 }
 
 .youtube {
 	height: 100%;
 	width: 100%;
+}
+
+.image {
+    height: 100%;
+    width: 100%;
 }
 
 .rectangle(@background-color, @top, @left){
@@ -29,6 +35,7 @@ body {
 	position: absolute;
 	top: @top;
 	left: @left;
+    text-align: justify
 }
 
 #rect1 {
@@ -126,20 +133,4 @@ body {
     30% { opacity: 0.2; }
     100% { opacity: 1; }
 }
-
-/*
-#cool-textbox .match {
-    color: rgba(20,20,20,0.7);
-    display: inline-block;
-    vertical-align: top;
-}
-
-#cool-textbox .match.disabled .first-line {
-    color: rgba(20,20,20,0.3);
-}
-
-#cool-textbox .match .first-line {
-    color: rgba(20,20,20,0.9);
-}
-*/
 
